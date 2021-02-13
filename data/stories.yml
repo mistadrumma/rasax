@@ -92,10 +92,4 @@ stories:
   - intent: greet
   - intent: nlu_fallback
   - action: utter_please_rephrase
-- story: Story from Conversation ID 904e272484ae4893bae1f3da78209c13
-  steps:
-  - action: utter_please_rephrase
-  - intent: nlu_fallback
-  - intent: nlu_fallback
-  - action: utter_please_rephrase
-  - action: utter_help_response
+
