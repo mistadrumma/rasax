@@ -1,0 +1,182 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Привет!
+    - Првиет!
+    - Привет
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Пока
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - Спасибо!
+    - so perfect
+    - Спасибо
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: response_location
+  examples: |
+    - [Белгород](location)
+    - [Москва](location)
+    - [Питер](location)
+    - [Казань](location)
+- intent: search_shops
+  examples: |
+    - Есть ли тут [магазины](direction)?
+    - Найди мне [магазин](direction) поблизости
+    - [магазин](direction)
+    - Покажи мне все [магазины](direction) пядом
+    - Покажи где я могу [совершить покупки](direction)
+    - Мне нужен [магазин](direction)
+    - Есть ли магазин в [Белгороде](location)?
+- intent: req_bill_for_dinner
+  examples: |
+    - Я хочу [оплатить счет](reqbill)
+    - [Заплати по счету](reqbill)
+    - [Оплати мой ужин](reqbill)
+    - Пора закругляться, [оплати счет](reqbill)
+    - Я ХОЧУ [ОПЛАТИТЬ УЖИН](reqbill)
+- intent: req_acc
+  examples: |
+    - [Текущий счет](accounttype)
+    - [Кредитная карта](accounttype)
+    - [Кредитка](accounttype)
+    - [Основной счет](accounttype)
+    - [Зарплатная карта](accounttype)
+    - [кРЕДИТНЫЙ](accounttype)
+- intent: req_for_taxi
+  examples: |
+    - [Вызови такси](reqtaxi)
+    - [Вызови такси](reqtaxi) [для меня]{"entity": "num_person", "value": "1"}
+    - [Вызови такси](reqtaxi) для нас
+    - [Вызови такси](reqtaxi) [для меня и для моей подруги]{"entity": "num_person", "value": "2"}
+    - [такси](reqtaxi) [для меня и для моей подруги]{"entity": "num_person", "value": "2"}
+    - поедем [я и моя подруга]{"entity": "num_person", "value": "2"}
+    - Я хочу заказть [такси](reqtaxi)
+    - Привет! Закажи [такси](reqtaxi)
+    - Хочу вызвать [такси](reqtaxi)
+    - Я хочу заказать [такси](reqtaxi)
+    - Я хочу вызвать [такси](reqtaxi)
+- intent: number_person
+  examples: |
+    - [Я и моя подруга]{"entity": "num_person", "value": "2"}
+    - [Мы с подругой]{"entity": "num_person", "value": "2"}
+    - [Я и мой друг]{"entity": "num_person", "value": "2"}
+    - нас будет [двое]{"entity": "num_person", "value": "2"}
+    - [на двоих]{"entity": "num_person", "value": "2"}
+    - [два]{"entity": "num_person", "value": "2"}
+    - [три]{"entity": "num_person", "value": "3"}
+    - [мне и подруге]{"entity": "num_person", "value": "2"}
+    - [мне и другу]{"entity": "num_person", "value": "2"}
+    - [подруге и мне]{"entity": "num_person", "value": "2"}
+    - [другу и мне]{"entity": "num_person", "value": "2"}
+    - я [один]{"entity": "num_person", "value": "1"}
+    - для [меня]{"entity": "num_person", "value": "2"}
+    - мы вдвоем
+- intent: pay_service
+  examples: |
+    - Оплати пой счет в  ЖКХ
+- intent: nlu_fallback
+  examples: |
+    - Какая погода?
+    - Не хочу гулять
+    - Чем мне бы заняться?
+    - Не могу понять
+- synonym: '1'
+  examples: |
+    - для меня
+    - один
+- synonym: '2'
+  examples: |
+    - для меня и для моей подруги
+    - я и моя подруга
+    - Я и моя подруга
+    - Мы с подругой
+    - Я и мой друг
+    - двое
+    - на двоих
+    - два
+    - мне и подруге
+    - мне и другу
+    - подруге и мне
+    - другу и мне
+    - меня
+    - нас двое
+- synonym: '3'
+  examples: |
+    - три

@@ -1,0 +1,101 @@
+version: "2.0"
+stories:
+- story: search shop withot loc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_shops
+    entities:
+    - direction: магазины
+  - action: utter_ask_location
+  - intent: response_location
+    entities:
+    - location: Белгород
+    - direction: магазин
+  - action: action_direction_search
+  - slot_was_set:
+    - adress: adress
+  - intent: goodbye
+  - action: utter_goodbye
+- story: search shop whith loc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_shops
+    entities:
+    - direction: магазины
+    - location: Белгород
+  - action: action_direction_search
+  - slot_was_set:
+    - adress: adress
+  - intent: goodbye
+  - action: utter_goodbye
+- story: pay for dinner whith acc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: req_bill_for_dinner
+    entities:
+    - reqbill: оплатить счет
+    - accounttype: Текущий счет
+  - action: utter_bill_account
+  - intent: goodbye
+  - action: utter_goodbye
+- story: pay for dinner whithout acc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: req_bill_for_dinner
+    entities:
+    - reqbill: оплатить счет
+  - action: utter_ask_account
+  - intent: req_acc
+    entities:
+    - accounttype: Текущий счет
+  - action: utter_bill_account
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 511b52ea954b4945938098cd843a0dd5
+  steps:
+  - slot_was_set:
+    - reqtaxi: такси
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - reqbill: ОПЛАТИТЬ УЖИН
+  - intent: req_bill_for_dinner
+    entities:
+    - reqbill: ОПЛАТИТЬ УЖИН
+  - slot_was_set:
+    - reqbill: ОПЛАТИТЬ УЖИН
+  - intent: req_for_taxi
+    entities:
+    - reqtaxi: такси
+  - action: utter_bill_account
+- story: Story from Conversation ID b22990d83fae4c5797b625bad5493e37
+  steps:
+  - action: utter_ask_num_person
+  - slot_was_set:
+    - reqtaxi: такси
+  - slot_was_set:
+    - num_person: '2'
+  - intent: number_person
+    entities:
+    - num_person: '2'
+  - slot_was_set:
+    - num_person: '2'
+  - action: rent_taxi
+  - intent: mood_great
+  - action: utter_greet
+- story: Story from Conversation ID 095c7e3d16a04266b65d619bc390ab49
+  steps:
+  - intent: greet
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+- story: Story from Conversation ID 904e272484ae4893bae1f3da78209c13
+  steps:
+  - action: utter_please_rephrase
+  - intent: nlu_fallback
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: utter_help_response

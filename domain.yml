@@ -1,0 +1,125 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- stop:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- response_location:
+    use_entities: true
+- search_shops:
+    use_entities: true
+- req_bill_for_dinner:
+    use_entities: true
+- req_acc:
+    use_entities: true
+- req_for_taxi:
+    use_entities: true
+- number_person:
+    use_entities: true
+- pay_service:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities:
+- location
+- direction
+- reqbill
+- accounttype
+- reqtaxi
+- num_person
+slots:
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  direction:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  adress:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  accounttype:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  reqbill:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  reqtaxi:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  num_person:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    max_value: 10.0
+    min_value: 0.0
+responses:
+  utter_greet:
+  - text: Привет! Рад тебя видеть! Чем могу помочь?
+  - text: Приветствую!!!!! Всегда рад тебя видеть
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Пока!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_location:
+  - text: Скажи где ты находишься???
+  - text: Что бы найти {direction} я должен знать где ты находишься. Скажи пожалуйста свой город
+  utter_bill_account:
+  - text: Ок я выполню запрос {reqbill} c {accounttype}
+  utter_ask_account:
+  - text: Для этого я должен знать с какого счета платить. Скажи пожалуйста
+  utter_ask_numperson:
+  - text: Сколько человек поедет в такси?
+  - text: Сколько вас человек?
+  - text: Вы один или с кем то?
+  utter_ask_num_person:
+  - text: Сколько вас человек?
+  - text: Кто поедет?
+  - text: Вы поедете один?
+  utter_please_rephrase:
+  - text: Пожалуйста, извините. Я не могу понять это. Попробуйте, переформулируйте вопрос.
+  utter_help_response:
+  - text: Я например могу вызвать такси и оплатить ваш счет
+actions:
+- action_direction_search
+- utter_ask_numperson
+- utter_ask_num_person
+- rent_taxi
+forms: {}
+e2e_actions: []
