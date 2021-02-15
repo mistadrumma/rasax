@@ -112,6 +112,7 @@ nlu:
     - [Оплати мой ужин](reqbill)
     - Пора закругляться, [оплати счет](reqbill)
     - Я ХОЧУ [ОПЛАТИТЬ УЖИН](reqbill)
+    - Хочу [оплатить ужин](reqbill)
 - intent: req_acc
   examples: |
     - [Текущий счет](accounttype)
