@@ -18,6 +18,7 @@ nlu:
     - Привет!
     - Првиет!
     - Привет
+    - Приветствую!
 - intent: goodbye
   examples: |
     - good afternoon
@@ -105,6 +106,7 @@ nlu:
     - Покажи где я могу [совершить покупки](direction)
     - Мне нужен [магазин](direction)
     - Есть ли магазин в [Белгороде](location)?
+    - Я ищу магазин в белгороде
 - intent: req_bill_for_dinner
   examples: |
     - Я хочу [оплатить счет](reqbill)
@@ -150,15 +152,19 @@ nlu:
     - я [один]{"entity": "num_person", "value": "1"}
     - для [меня]{"entity": "num_person", "value": "2"}
     - мы вдвоем
+    - Мы вчетвером
 - intent: pay_service
   examples: |
     - Оплати пой счет в  ЖКХ
 - intent: nlu_fallback
   examples: |
     - Какая погода?
-    - Не хочу гулять
+    - [Не хочу](wish) гулять
     - Чем мне бы заняться?
     - Не могу понять
+- intent: emotion
+  examples: |
+    - Я так [устал](state_person)!
 - synonym: '1'
   examples: |
     - для меня
