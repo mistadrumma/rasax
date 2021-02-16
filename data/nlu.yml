@@ -152,7 +152,7 @@ nlu:
     - я [один]{"entity": "num_person", "value": "1"}
     - для [меня]{"entity": "num_person", "value": "2"}
     - мы вдвоем
-    - Мы вчетвером
+    - Мы [вчетвером ](num_person)
 - intent: pay_service
   examples: |
     - Оплати пой счет в  ЖКХ
