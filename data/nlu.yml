@@ -19,6 +19,7 @@ nlu:
     - Првиет!
     - Привет
     - Приветствую!
+    - Добрый день!
 - intent: goodbye
   examples: |
     - good afternoon
