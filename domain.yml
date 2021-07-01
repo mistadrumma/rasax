@@ -7,6 +7,8 @@ session_config:
 intents:
 - stop:
     use_entities: true
+- emotion:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -44,7 +46,6 @@ entities:
 - accounttype
 - reqtaxi
 - num_person
-- emotion
 slots:
   location:
     type: rasa.shared.core.slots.TextSlot
