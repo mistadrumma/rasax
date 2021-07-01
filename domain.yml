@@ -44,6 +44,7 @@ entities:
 - accounttype
 - reqtaxi
 - num_person
+- emotion
 slots:
   location:
     type: rasa.shared.core.slots.TextSlot
