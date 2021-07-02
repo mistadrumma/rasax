@@ -2,75 +2,56 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - Привет!
-    - Првиет!
     - Привет
     - Приветствую!
     - Добрый день!
+    - Здарова
+    - Привет, чувак!
+    - Хай
+    - добры вечер
+    - доброе утро
     - привет
+    - Привет!
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
     - Пока
+    - До свидания!
+    - До новых встреч!
+    - Давай
+    - До встречи!
+    - Увидимся позже
+    - досвидос
+    - пакеда
+    - чау
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - ок
+    - поддерживаю
+    - конечно
+    - это звучит хорошо
+    - соглсен
     - да
+    - хорошо
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - нет
+    - никогда
+    - я не думаю
+    - неа
+    - не так
+    - не реально
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - Спасибо!
-    - so perfect
-    - Спасибо
+    - превосходно
+    - великолепно
+    - чувствую себя королем
+    - Замечательно
+    - я вдохновлен
+    - супер
+    - невероятно
+    - это так круто
+    - нереально круто
+    - прекрасно
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -79,21 +60,21 @@ nlu:
     - I am disappointed
     - super sad
     - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - плохо
+    - очень плохо
+    - блин
+    - не хорошо
+    - не очень хорошо
+    - очень грустно
+    - так груустно
+    - так грустно
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - ты человек?
+    - я говорю с ботом?
+    - я говорю с человеком?
     - Ты бот?
+    - опять бот
 - intent: response_location
   examples: |
     - [Белгород](location)
@@ -159,15 +140,6 @@ nlu:
 - intent: pay_service
   examples: |
     - Оплати пой счет в  ЖКХ
-- intent: nlu_fallback
-  examples: |
-    - Какая погода?
-    - [Не хочу](wish) гулять
-    - Чем мне бы заняться?
-    - Не могу понять
-- intent: emotion
-  examples: |
-    - Я так [устал](state_person)!
 - synonym: '1'
   examples: |
     - для меня
