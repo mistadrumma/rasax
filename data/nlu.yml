@@ -20,6 +20,7 @@ nlu:
     - Привет
     - Приветствую!
     - Добрый день!
+    - привет
 - intent: goodbye
   examples: |
     - good afternoon
@@ -92,6 +93,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Ты бот?
 - intent: response_location
   examples: |
     - [Белгород](location)
